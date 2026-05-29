@@ -25,7 +25,7 @@ sudo pacman -S linux-zen linux-zen-headers linux-lts linux-lts-headers
 Add to grub boot options
 ```
 sudo update-grub
-reboot
+loginctl reboot
 ```
 After the reboot, you should be able to select the new kernel under advanced options. When you login, verify you're using the zen kernel. Artix automatically runs fastfetch, which includes the kernel version, but you can also run a command for it.
 ```
