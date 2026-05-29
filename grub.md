@@ -1,7 +1,7 @@
 # GRUB
 A quick reference on setting up GRUB for multi-boot, multiple kernels, and cleaning up themes. 
 
-Remember, in all instances of using nano, you can use a GUI application too, but you must be sudo. 
+Remember, in all instances of using nano, you can use a GUI application instead, but you must be sudo. 
 ## Get GRUB to see other operating systems. (For Multi-boot)
 Open up the terminal.
 ```
