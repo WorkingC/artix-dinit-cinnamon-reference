@@ -20,7 +20,7 @@ sudo update-grub
 ## Add an additional kernel
 Install the zen or lts kernel
 ```
-	sudo pacman -S linux-zen linux-zen-headers linux-lts linux-lts-headers
+sudo pacman -S linux-zen linux-zen-headers linux-lts linux-lts-headers
 ```
 Add to grub boot options
 ```
