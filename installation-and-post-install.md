@@ -38,7 +38,7 @@ I hope you're doing your initial learning of Archlinux in a VM, because if you d
 
 ### Packages (Programs, Applications)
 For Artix, you can browse and search the package database: 
-https://packages.artixlinux.org/
+- https://packages.artixlinux.org/
 
 #### wget > pacman -U
 You can also directly install versions of packages direct from the Artix or Arch package archives using wget. If something breaks and you can determine what package and version it was, you can downgrade it. 
@@ -46,9 +46,9 @@ You can also directly install versions of packages direct from the Artix or Arch
 sudo pacman -S wget
 ```
 These are package archives.
-https://archive.artixlinux.org/
-https://archive2.artixlinux.org/
-https://archive.archlinux.org/
+- https://archive.artixlinux.org/
+- https://archive2.artixlinux.org/
+- https://archive.archlinux.org/
 	
 Fidnd the package you want, copy the .tar.zst url. And to install from them, the format looks like:
 ```
@@ -63,9 +63,7 @@ PER THE ARTIX WIKI, installing from Arch's repositories and the AUR, while possi
 If you're looking around for packages to install, see a recommendation, then try to pacman -S it, then get stopped by "Target not found," you can use an AUR helper. Some of the apps I recommend later need an AUR to install, so while you're doing essential instealls, setup an AUR at that time.
 
 First
-```
-sudo pacman -S --needed base-devel git
-```
+`sudo pacman -S --needed base-devel git`
 Then
 ```
 git clone https://aur.archlinux.org/paru.git
@@ -78,13 +76,9 @@ https://aur.archlinux.org/ has a complete searchable database of Linux applicati
 Be mindful, this is community maintained, which means malignant packages can slip through the cracks. The rule of thumb is to check the PKGBUILD of the AUR installation before running the AUR command for it - but new end users wouldn't know what to look for. The other rule of thumb is to just not blindly install packages through AUR without checking feedback on it first.
 
 If you try to run
-```
-yay -S package-name
-```
+`yay -S package-name`
 and then get an immediate error like
-```            
-yay: error while loading shared libraries: libalpm.so.15: cannot open shared object file: No such file or directory
-```
+`yay: error while loading shared libraries: libalpm.so.15: cannot open shared object file: No such file or directory`
 You'll need to rebuild and reinstall the AUR of choice.
 ```
 # Remove old yay directory
@@ -143,24 +137,16 @@ Artix's Cinnamon install comes comes with Eye of Gnome, an image viewr like Micr
   You can do this with any AppImage that runs on Linux.
         
   If you're using Tor to watch videos, you MUST install ffmpeg4.4!
-  ```
-  sudo pacman -S ffmpeg4.4
-  ```
+  `sudo pacman -S ffmpeg4.4`
 
 ### Firefox Profiles:
   Manually drop your firefox profiles here.
-  ```
-  ~/.mozilla/firefox/
-  ```
+  `~/.mozilla/firefox/`
 ### Librewolf:
 Manually drop your firefox profiles here. You may have to brute force getting your profile to work by editing profiles.ini
-```
-~/.librewolf/
-```	
+`~/.librewolf/`	
 LibreWolf comes with some default settings that breaks uploads on certain websites (bluesky). Open about:config
-```
-privacy.resistFingerprinting = false
-```
+`privacy.resistFingerprinting = false`
 Remove title bar.
 ```
 Click the 3 lines far right (usually under the X) to open the application menu.
@@ -175,26 +161,16 @@ Default is false, set it true.
 ```
 ### XnviewMP:
 XNView does not follow the system color theming. Change it here:
-```
-Tools > Settings, General > Theme
-```
+`Tools > Settings, General > Theme`
 User configs:
-```
-~/.config/xnview
-```
+`~/.config/xnview`
 ### MPV :
 User configs (no root needed):
-```
-~/.config/mpv/  
-```
+`~/.config/mpv/  `
 You will not have an mpv.conf or input.conf by default .
     
 ### Cudatext: 
 If we want word wrap on by default: 
-```
-sudo cudatext /home/c/.config/cudatext/settings/user.json
-```
+`sudo cudatext /home/c/.config/cudatext/settings/user.json`
 Add this before the closing curly-brace:
-```
-"wrap_mode": 1
-```
+`"wrap_mode": 1`
