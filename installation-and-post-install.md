@@ -5,10 +5,10 @@
 The install media  media boots right into a Cinnamon environment with several things on the desktop. You can just install Artix from the icon. What matters to us is our system's partitioning. When you get to that section, opt for a manual partition. 
 ```
 # Filesystem Setup
-/boot/efi	  Fat32		  flags: boot, bios-grub, 	512MB
-swap		    linuxswap	flags: swap					      Half of your RAM in MB. eg, 16GB RAM / 8192MB
-/			      ext4 or brtfs							          96GB (98304MB) to 128GB (131072MB)
-/home		     ext4 or brtfs							        Remainder of storage. 
+/boot/efi	  Fat32		  	flags: boot, bios-grub, 	512MB
+swap		  linuxswap		flags: swap					Half of your RAM in MB. eg, 16GB RAM / 8192MB
+/			  ext4 or brtfs								96GB (98304MB) to 128GB (131072MB)
+/home		  ext4 or brtfs							    Remainder of storage. 
 ```
 This will set your system up to be reinstall proof - you'll be able to install a different Linux distribution without wiping your home partition. 
 
