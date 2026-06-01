@@ -194,7 +194,7 @@ If we want word wrap on by default:
 ```
 sudo cudatext /home/c/.config/cudatext/settings/user.json
 ```
-# Add this before the closing curly-brace:
+Add this before the closing curly-brace:
 ```
 "wrap_mode": 1
 ```
