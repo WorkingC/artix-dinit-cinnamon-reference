@@ -130,10 +130,9 @@ Voidtools Everything > fsearch | git clone https://aur.archlinux.org/fsearch-git
 ```
 Artix's Cinnamon install comes comes with Eye of Gnome, an image viewr like Microsoft Image Viewer, Nemo, a tabbed file browser, and a built-in PDF/ebook reader. 
 
-###
-Specific App Details
-###
-Tor:
+
+## Specific App Details
+### Tor:
   Download Tor from the official website. The download for linux is a portable application, so just unzip and drop it wherever in your file system. For my purposes, it's under /home/c/Documents/Portable Apps
   To make it an app in the system, open Terminal
   ```
@@ -148,41 +147,54 @@ Tor:
   sudo pacman -S ffmpeg4.4
   ```
 
-Firefox Profiles:
+### Firefox Profiles:
   Manually drop your firefox profiles here.
+  ```
   ~/.mozilla/firefox/
-
-Librewolf:
-  Manually drop your firefox profiles here. You may have to brute force getting your profile to work by editing profiles.ini
-  ~/.librewolf/
-
-  LibreWolf comes with some default settings that breaks uploads on certain websites (bluesky). Open about:config
-    privacy.resistFingerprinting = false
-  
-  Remove title bar.
-    Click the 3 lines far right (usually under the X) to open the application menu.
-    Next, click on "More Tools" then "Customize toolbar...".
-    This will open a new tab. Uncheck "Title Bar" at the bottom left.
-  Fix diagonal tearing:
-    about:config
-    Search layers.acceleration.force-enabled
-    Default is false, set it true. 
+  ```
+### Librewolf:
+Manually drop your firefox profiles here. You may have to brute force getting your profile to work by editing profiles.ini
+```
+~/.librewolf/
+```	
+LibreWolf comes with some default settings that breaks uploads on certain websites (bluesky). Open about:config
+```
+privacy.resistFingerprinting = false
+```
+Remove title bar.
+```
+Click the 3 lines far right (usually under the X) to open the application menu.
+Next, click on "More Tools" then "Customize toolbar...".
+This will open a new tab. Uncheck "Title Bar" at the bottom left.
+```
+Fix diagonal tearing:
+```
+about:config
+Search layers.acceleration.force-enabled
+Default is false, set it true. 
+```
+### XnviewMP:
+XNView does not follow the system color theming. Change it here:
+```
+Tools > Settings, General > Theme
+```
+User configs:
+```
+~/.config/xnview
+```
+### MPV :
+User configs (no root needed):
+```
+~/.config/mpv/  
+```
+You will not have an mpv.conf or input.conf by default .
     
-XnviewMP:
-  XNView does not follow the system color theming. Change it here:
-  Tools > Settings, General > Theme
-
-  User configs:
-  ~/.config/xnview
-
-MPV :
-  User configs (no root needed):
-  ~/.config/mpv/
-  
-  You will not have an mpv.conf or input.conf by default .
-    
-Cudatext: 
-	# If we want word wrap on by default: 
-	sudo cudatext /home/c/.config/cudatext/settings/user.json
-	# Add this before the closing curly-brace:
-	"wrap_mode": 1
+### Cudatext: 
+If we want word wrap on by default: 
+```
+sudo cudatext /home/c/.config/cudatext/settings/user.json
+```
+# Add this before the closing curly-brace:
+```
+"wrap_mode": 1
+```
