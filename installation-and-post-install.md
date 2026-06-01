@@ -124,29 +124,37 @@ Voidtools Everything > fsearch | git clone https://aur.archlinux.org/fsearch-git
 ```
 Artix's Cinnamon install comes comes with Eye of Gnome, an image viewr like Microsoft Image Viewer, Nemo, a tabbed file browser, and a built-in PDF/ebook reader. 
 
-
 ## Specific App Details
 ### Tor:
-  Download Tor from the official website. The download for linux is a portable application, so just unzip and drop it wherever in your file system. For my purposes, it's under /home/c/Documents/Portable Apps
-  To make it an app in the system, open Terminal
-  ```
-  cd "/home/c/Documents/Portable Apps/tor-browser"
-  ./start-tor-browser.desktop --register-app
-  ```
-  This makes it appear in your menu as a recognized app, which you can then pin to your taskbar.
-  You can do this with any AppImage that runs on Linux.
+Download Tor from the official website. The download for linux is a portable application, so just unzip and drop it wherever in your file system. For my purposes, it's under /home/c/Documents/Portable Apps.
+
+To make it an app in the system, open Terminal:
+```
+cd "/home/c/Documents/Portable Apps/tor-browser"
+./start-tor-browser.desktop --register-app
+```
+This makes it appear in your menu as a recognized app, which you can then pin to your taskbar. You can do this with any AppImage that runs on Linux.
         
-  If you're using Tor to watch videos, you MUST install ffmpeg4.4!
-  `sudo pacman -S ffmpeg4.4`
+If you're using Tor to watch videos, you MUST install ffmpeg4.4!
+```
+sudo pacman -S ffmpeg4.4
+```
 
 ### Firefox Profiles:
-  Manually drop your firefox profiles here.
-  `~/.mozilla/firefox/`
+Manually drop your firefox profiles here.
+```
+~/.mozilla/firefox/
+```
+
 ### Librewolf:
 Manually drop your firefox profiles here. You may have to brute force getting your profile to work by editing profiles.ini
-`~/.librewolf/`	
+```
+~/.librewolf/
+```
 LibreWolf comes with some default settings that breaks uploads on certain websites (bluesky). Open about:config
-`privacy.resistFingerprinting = false`
+```
+privacy.resistFingerprinting = false`
+```
 Remove title bar.
 ```
 Click the 3 lines far right (usually under the X) to open the application menu.
@@ -159,18 +167,30 @@ about:config
 Search layers.acceleration.force-enabled
 Default is false, set it true. 
 ```
+
 ### XnviewMP:
 XNView does not follow the system color theming. Change it here:
-`Tools > Settings, General > Theme`
+```
+Tools > Settings, General > Theme
+```
 User configs:
-`~/.config/xnview`
+```
+~/.config/xnview
+```
+
 ### MPV :
 User configs (no root needed):
-`~/.config/mpv/  `
+```
+~/.config/mpv/
+```
 You will not have an mpv.conf or input.conf by default .
     
 ### Cudatext: 
 If we want word wrap on by default: 
-`sudo cudatext /home/c/.config/cudatext/settings/user.json`
+```
+sudo cudatext /home/c/.config/cudatext/settings/user.json
+```
 Add this before the closing curly-brace:
-`"wrap_mode": 1`
+```
+"wrap_mode": 1
+```
