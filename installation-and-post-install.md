@@ -111,7 +111,7 @@ less PKGBUILD
 # Press q to exit the less viewer. 
 ```
 ## A list of recommended apps
-These commands are written out in such a way that you can copy-paste (Shift+Ctrl+V in gnome-terminal) the line after the | to quickly begin an install. 
+These commands are written out in such a way that you can copy-paste (Shift+Ctrl+V in gnome-terminal) the line after the | to quickly begin an install. If you're reading this you probably *don't* know, don't blindly trust commands you see and copy and paste them. 
 
 The following have Linux versions:
 ```
@@ -125,14 +125,10 @@ Flashplayer Standalone | git clone https://aur.archlinux.org/flashplayer-standal
 ```
 The following are Windows applications, to(>) nearest Linux equivalents, and it's the reason those near equivalents chosen in the earlier essentials section:
 ```
-Windows File Explorer > Nemo | sudo pacman -S nemo
-Windows File Explorer > Dolphin | sudo pacman -S dolphin
-Notepad++ > Kate | sudo pacman -S kate
 Notepad++ > CudaText | git clone https://aur.archlinux.org/cudatext-gtk2-bin.git && cd cudatext-gtk2-bin.git && makepkg -si
-Microsoft Image Viewer > Gwenview | sudo pacman -S gwenview
-Adobe PDF Reader, Calibre > Okular | sudo pacman -S okular
 Voidtools Everything > fsearch | git clone https://aur.archlinux.org/fsearch-git.git && cd fsearch-git && makepkg -si
 ```
+Artix's Cinnamon install comes comes with Eye of Gnome, an image viewr like Microsoft Image Viewer, Nemo, a tabbed file browser, and a built-in PDF/ebook reader. 
 
 ###
 Specific App Details
@@ -140,10 +136,10 @@ Specific App Details
 Tor:
   Download Tor from the official website. The download for linux is a portable application, so just unzip and drop it wherever in your file system. For my purposes, it's under /home/c/Documents/Portable Apps
   To make it an app in the system, open Terminal
-
+  ```
   cd "/home/c/Documents/Portable Apps/tor-browser"
   ./start-tor-browser.desktop --register-app
-
+  ```
   This makes it appear in your menu as a recognized app, which you can then pin to your taskbar.
   You can do this with any AppImage that runs on Linux.
         
@@ -151,6 +147,7 @@ Tor:
   ```
   sudo pacman -S ffmpeg4.4
   ```
+
 Firefox Profiles:
   Manually drop your firefox profiles here.
   ~/.mozilla/firefox/
