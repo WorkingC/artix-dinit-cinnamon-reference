@@ -94,8 +94,8 @@ Open nano and add the network locations to file system tab (fstab)
 nano /etc/fstab
 
 # Add these lines.
-//10.0.0.1/c /mnt/Shares/D cifs username=cow,password=moo,uid=1000,gid=1000,user,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
-//10.0.0.1/d /mnt/Shares/E cifs username=cow,password=moo,uid=1000,gid=1000,user,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
+//10.0.0.1/c /mnt/Shares/D cifs username=cow,password=moo,uid=1000,gid=1000,users,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
+//10.0.0.1/d /mnt/Shares/E cifs username=cow,password=moo,uid=1000,gid=1000,users,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
 ```
 
 In the terminal:
@@ -136,13 +136,13 @@ password=moo
 
 Save it. Now we set it so it's read accessible by users. Back to terminal:
 ```
-sudo chmod 644 /etc/samba/credentials
+sudo chmod 600 /etc/samba/credentials
 ```
 
 Back to fstab:
 ```
-//10.0.0.1/c /mnt/Shares/D cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,user,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
-//10.0.0.1/d /mnt/Shares/E cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,user,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
+//10.0.0.1/c /mnt/Shares/D cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,users,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
+//10.0.0.1/d /mnt/Shares/E cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,users,iocharset=utf8,noauto,nofail,users,vers=3.0,soft,retrans=3,_netdev 0 0
 ```
 
 Test if it's all good.
