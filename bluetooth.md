@@ -31,3 +31,13 @@ Then:
 ```
 sudo dinitctl restart bluetoothd
 ```
+### On Nintendo Bluetooth devices
+If you get an issue where you run through the trust-pair-connect sequence, then later reconnect your controller and then have no input, there's a  rough workaround. You need to put your controller in paring mode before the controller automatically connects, then manually connect to it. 
+
+Yeah, that's cumbersome, but, you can automate that. 
+```
+#!/bin/sh
+sleep 1
+echo -e "connect XX:XX:XX:XX:XX:XX\nquit" | bluetoothctl
+```
+Save it, replace XX:XX:XX:XX:XX:XX with your device's MAC address, and attach it to a hotkey in Cinnamon's Keyboard settings. Then when you start the controller, put it in pairing mode, then hit the hotkey and your controller will connect and work properly. 
