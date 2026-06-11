@@ -1,5 +1,5 @@
 # OBS 
-For games
+This is primarily for configuring OBS for capturing game video, not necessarily for streaming. 
 
 ## Prerequisites
 ```
