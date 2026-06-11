@@ -1,4 +1,6 @@
-# OBS
+# OBS 
+For games
+
 ## Prerequisites
 ```
 wget https://archive.archlinux.org/packages/o/obs-studio/obs-studio-32.1.2-5-x86_64.pkg.tar.zst
