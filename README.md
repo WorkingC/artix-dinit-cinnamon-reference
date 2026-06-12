@@ -8,4 +8,4 @@ This is written for someone freshly coming from Windows and still having that ex
 ## When you see "sudo nano"
 This might be frowned upon, but you do not have to use the terminal text editor to edit files, which is good given how unwieldy it can be. You could instead use a different text editor, something like Kate, Leafpad, or Cudatext. In those cases, you still run them with sudo, but as ```sudo cudatext``` or similar. Some text editors, like Kate, will flash up a warning about launching as sudo. Just follow their instructions. 
 
-Likewise, you do not have to access those files through the terminal. If it's your preference to browse 
+Likewise, you do not have to access those files through the terminal. If it's your preference to browse files using a file browser app, you can, and Cinnamon's built-in Nemo browser is perfectly serviceable, but it will be slower. And there wull be some instances where you have to right-click on a file folder to open it as root - and any app launches to edit those files will be as root as well, as though you had launched it through the terminal using sudo. 
