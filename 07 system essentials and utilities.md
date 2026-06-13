@@ -1,5 +1,5 @@
 # System Essentials
-These are going to be written out as one-liners you can copy and paste into the terminal. Some of this stuff comes stock on the Artix install, but in the event you decied to install the bare minimum instead of wone of the init+DE .isos, I have you covered. 
+These are going to be written out as one-liners you can copy and paste into the terminal. Some of this stuff comes stock on the Artix install, but in the event you decied to install the bare minimum instead of one of the init+DE .isos, I have you covered. 
 
 Media Essentials
 ```
