@@ -33,3 +33,33 @@ xdotool keydown e && sleep 0.024 && xdotool keyup e
 control + alt + r
     pkill -USR1 sxhkd
 ```
+## Coming from AHK
+### Sleep
+Sleep in AHK is 1/1000th of a second. Sleep in bash is 1 whole second. 
+```
+sleep 100   > sleep 0.100    # 1/10th of a second
+sleep 24    > sleep 0.024    # 24/1000ths of a second
+```
+### Send > Key and Type
+Each Key must have a space. 
+```
+send "123"    > xdotool key 1 2 3
+```
+For longer strings, use xdotool type:
+```
+# AHK
+Send "Billy Bob Joe."
+# xdotool
+xdotool type "Billy Bob Joe."
+```
+### SetKeyDelay > Sleep
+In AHK, SetKeyDelay X, Y sets the delay between the down and up part of the keystroke with X, and the delay between two strokes with Y. xdotool does not have a SetKeyDelay variable. Instead, you'll have to do something like this for each key.
+```
+# AHK
+SetKeyDelay 16, 8
+Send "12"
+
+# xdotool
+xdotool keydown 1 && sleep 0.016 && xdotool keyup 1 && sleep 0.008
+xdotool keydown 2 && sleep 0.016 && xdotool keyup 2 && sleep 0.008
+```
