@@ -3,7 +3,7 @@ These are going to be written out as one-liners you can copy and paste into the 
 
 Media Essentials
 ```
-sudo pacman -S mpv yt-dlp ffmpeg4.4 ffmpegthumbs
+sudo pacman -S mpv yt-dlp ffmpeg4.4
 ```
 File compression management
 ```
